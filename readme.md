@@ -27,6 +27,6 @@ There is a Main class in the subpackage that contains questions about the subpac
 
 ### Use the following command to clone project:
 
-```git clone @github.com:volodymyrholovetskyi/car_collection_management.git```
+```git clone git@github.com:volodymyrholovetskyi/Java_Basics.git```
 
 ---
