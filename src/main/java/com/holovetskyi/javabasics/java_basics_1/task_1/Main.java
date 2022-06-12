@@ -14,24 +14,34 @@ public class Main {
 
 
     public static void main(String[] args) {
-        boolean isDivisor= true;
+        boolean isDivisor = true;
+        int count = 0;
 
         while (isDivisor) {
 
             System.out.println("Enter the first number: ");
-            countNumberCommonDivisors(scanner.nextInt());
+            int firstNumber = scanner.nextInt();
 
             System.out.println("Enter the second number: ");
             int secondNumber = scanner.nextInt();
 
+            int countFirstNumber = countNumberCommonDivisors(firstNumber);
+            int countSecondNumber = countNumberCommonDivisors(secondNumber);
 
+            count = countFirstNumber + countSecondNumber;
+
+            if (count <= 1) {
+                System.out.println("\nCount should be greater than: 1 \n");
+            } else if (firstNumber % count == 0 || secondNumber % count == 0) {
+                isDivisor = false;
+            }
         }
     }
 
-    public static int countNumberCommonDivisors(int number){
+    public static int countNumberCommonDivisors(int number) {
         int count = 0;
         for (int i = 2; i < number; i++) {
-            if (number%i == 0){
+            if (number % i == 0) {
                 count++;
             }
         }
